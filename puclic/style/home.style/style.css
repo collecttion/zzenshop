@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap');
+
+
+
+body{
+    font-family: 'Playfair Display', serif !important;
+    letter-spacing: 2px !important;
+    line-height: 1.6666666666667 !important;
+}
+.display-4 {
+            transition: 1s;
+            font-family: 'Montserrat', sans-serif !important;
+        }
+.baner img{
+    position: absolute;
+}
+.pt-6 {
+    padding-top: 10rem !important;
+}
+.img-fluid {
+    max-width: 97% !important; 
+}
+.navbar{
+    background: #fff;
+    opacity: 0.9;
+    transition: 1s;
+}
+.navbar-light .navbar-toggler {
+    border:none;
+    }
+.sticky-top .display-4{
+    font-size: 45px;
+}
+/*button*/
+.btn-prin{
+    background: #edb8ae;
+    border-radius: 200px !important;
+    color: #fff;
+    font-weight: 600!important;
+    text-transform: uppercase;
+    
+}
+
+.btn-prin i{
+    opacity: 0; 
+    transition: 0.5s;
+    position: relative;
+}
+.btn-prin:hover>i{
+    opacity: 1;
+    display: inline-block;
+    margin-left: 10%;
+}
+
+.link{
+    background: none;
+    color: #585858;
+}
+
+.link:hover{
+    opacity: 0.5;
+}
+
+.col-xl-10 button{
+    font-size: 14px;
+}
+
+.colection button{
+    height: 50px;
+    width: 218px;
+    font-size: 14px !important;
+}
+
+.play-css{
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    padding-top: 8%;
+    border-radius: 50%;
+    transition: 0.5s;
+    display: inline-block;
+}
+.play-css:hover{
+    width: 40px;
+    height: 40px;
+    padding-top: 10%;
+    }
+.repon{
+        font-size: 19px !important;
+        }
+
+/*main*/
+.product-post{
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    transition: 1s ;
+}
+.product-img2{
+    background-image: url("https://179324-566621-raikfcquaxqncofqfm.stackpathdns.com/zeen-shop/wp-content/uploads/sites/15/2018/08/shop-30-390x390.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    transition: 1s ;
+}
+.product-img1{
+    background-image: url("https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/06/shop-27-585x585.jpg");
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    transition: 1s ;
+}
+.product-post:hover{
+    background-size: 150%;
+}
+.product:hover{
+    background-size: 150%;
+}
+
+.view, .cart{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    float: left;
+    margin-top: 70%;
+    opacity: 0;
+    color: #000;
+    transition: 1s;
+}
+.view button{
+    padding: 0 !important;
+    background: #fff !important;
+}
+.product:hover>a .cart{
+    opacity: 1;
+}
+.product:hover>.view{
+    opacity: 1;
+}
+
+.modal-dialog {
+    max-width: 85% !important;
+ }
+ .modal-content {
+    border-radius: 0rem !important;
+}
+.modal-body {
+    padding: 0rem !important;
+}
+
+
+.start-view p i{
+    color: #FFBF00;
+}
+.display-9{
+        font-size: 11px;
+}
+
+
+
+
+.pb-6 {
+    padding-bottom: 11rem !important;
+}
+
+
+.read-load a{
+    color: #fff;
+    border-radius: 200px;
+}
+.read-load button{
+    background: #000;
+    width: 202px;
+    height: 51px;
+    font-size: 13px;
+    transition: 0.5s;
+}
+.read-load button:hover{
+    box-shadow: 5px 5px 5px #aaa;
+    letter-spacing: 3px;
+
+}
+/*footer*/
+.footer-img1{
+    background-image: url("https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/08/zeen-00006-585x585.jpg");
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.5;
+    transition: 2.5s;
+    width: 100%;
+    height: 400px;  
+}
+.footer-img2{
+    background-image: url("https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/08/zeen-00023-585x585.jpg");
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.5;
+    transition: 2.5s;
+    width: 100%;
+    height: 400px;  
+}
+.footer-img1, .footer-img2 p{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.footer-img1 p{
+    transition: 1s;
+}
+.footer-img2 p{
+    transition: 1s;
+}
+.footer-img1:hover>p{
+    opacity: 0;
+    letter-spacing: 10px;
+}
+.footer-img2:hover>p{
+    opacity: 0;
+    letter-spacing: 10px;
+}
+.footer-img2:hover>p{
+    opacity: 0;
+}
+.footer-img1:hover{
+    background-size: 120%;
+    opacity: 0.8;
+}
+.footer-img2:hover{
+    background-size: 120%;
+    opacity: 0.8;
+}
+
+.font-footer{
+    font-size: 13.5px;
+    font-size: 14px;
+    transition: 1s;
+}
+.footer-p-size{
+    text-align: right;
+}
+.font-footer p{
+    line-height: 1 !important;
+    font-size: 14px;
+
+}
+
+.font-footer p a{
+    color: #585858;
+    font-size: 12px;
+
+}
+.form-footer input{
+    border-bottom: 2px solid #222 !important;
+    border: 1px solid #fff ;
+    width: 50%;
+}
+.form-footer button{
+    width: 50%;
+    background: #000;
+    color: #fff;
+    height: 50px;
+    border-radius:0rem !important;
+}
+.form-footer i{
+    opacity: 0; 
+    transition: 0.5s;
+    position: relative;
+}
+.form-footer button:hover>i{
+    opacity: 1;
+    display: inline-block;
+    margin-left: 7%;
+}
+.end{
+    font-size: 11px;
+    font-weight: 600;
+    
+}
+.end p{
+    color: #585858;
+}
+
+@media (max-width: 1200px) { 
+        .display-4 {
+            font-size: 3rem !important;
+        }
+        .pt-6 {
+            padding-top: 10rem !important;
+        }
+        /*main*/
+        .product{
+            width: 100%;
+            height: 250px;
+        }
+
+}
+@media (max-width: 992px){
+        .pt-6 {
+            padding-top: 5rem !important;
+        }
+        .repon{
+            font-size: 11px !important;
+        }
+        .colection button{
+            height: 40px;
+            width: 200px;
+        }
+        /*main*/
+        .product{
+            width: 100%;
+            height: 190px;
+        }
+        .display-4 {
+            font-size: 2rem !important;
+        }
+        /*footer*/
+        .footer-img1, .footer-img2{
+            height: 300px;
+        }
+        .form-footer button{
+            font-size: 13px !important;
+        }
+        
+@media (max-width: 768px) {
+        .header{
+            display: none !important;
+        }
+        /*main*/
+        .product{
+            width: 100%;
+            height: 140px;
+        }
+        .sticky-top .display-4{
+            font-size: 35px !important;
+            opacity: 1;
+        }
+        /*footer*/
+        .footer-img1, .footer-img2{
+            height: 220px;
+        }
+        .footer-p-size{
+            text-align: left;
+        }
+        .form-footer input{
+            width: 100%;
+            margin-left: 0px;
+        }
+        .form-footer button{
+            width: 100%;
+            font-size: 13px !important;
+        }
+}
+@media (max-width: 576px) { 
+    .product{
+            height: 360px;
+        }
+    /*footer*/
+        .footer-img1, .footer-img2{
+            height: 360px;
+            margin-top: 5px;
+        }
+        .modal-dialog {
+            margin: 2rem !important;
+        }
+        .view, .cart {
+            margin-top: 80%;
+    }
+ }

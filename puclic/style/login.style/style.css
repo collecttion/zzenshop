@@ -1,0 +1,129 @@
+
+.login-page{
+	width:45%;
+	height: 70%; 
+	background: linear-gradient(to bottom, #343a40 0%, #004185 100%);
+	background-size: cover;
+	background-position: right;
+	margin: 10%;
+	border-radius: 5%;
+	position: relative;
+	color: #aaa;
+}
+.table2-login{
+	width:39%;
+	height: 82%;
+	margin: 2%;
+	margin-top: 7%;
+	background:#ff574d;
+	border-radius: 10px;
+	float: right;
+	margin-right: -7%;
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 12%;
+}
+.login{
+	position: absolute;
+	margin-left: 7%;
+	width: 62%;
+    height: 76%;
+   	margin-top: 12%;
+   	font-size: 18px;
+   	color: #403838;
+}
+.form-ground input, button{
+	height: 11%;
+	margin: 4%;
+	width: 80%;
+	font-size: 15px;
+	border:1px solid #aaa;
+	padding-left: 14px;
+}
+.form-ground label{
+	width:100%;
+}
+.form-ground button{
+  margin-top: 10%;
+  background:  #faab9f;
+  border:1px solid #aaa;
+  border-radius: 3px;
+  font-size: 18px;
+  transition: 0.5s;
+}
+.form-ground button a{
+	color: #fff;
+	text-decoration: none;
+}
+.font-end p{
+	text-align: center;
+	font-size: 16px;
+}
+.font-end{
+	margin-top: -16px;
+}
+.form-ground button:hover{
+	background: #ff574d;
+}
+.font-h{
+padding: 30px 0 30px 60px;
+}
+.font-h h3{
+	margin: 0 0 -34px;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #272323;
+}
+.checkbox{
+	margin-left: 3%;
+    margin-top: 3%;
+}
+.checkbox a{
+	margin-left: 24%;
+}
+
+.table2-login a{
+	font-size: 45px;
+	text-decoration: none;
+	color: #fff;
+}
+.table2-login p{
+    font-size: 19px;
+    width: 72%;
+    margin-left: 15%;
+	margin-bottom: 14%;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.table2-login #a{
+	background: #fff;
+	color: #faab9f;
+	padding: 6px 30px 6px 30px;
+	letter-spacing: 1px;
+    font-size: 16px;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.table2-login #a:hover{
+	background: #F8E0EC;
+}
+.roud li{
+	list-style: none;
+	display: inline-block;
+    font-size: 16px;
+    padding: 2%;
+    margin-bottom: 1rem;
+}
+.roud{
+	margin-top: 26%;
+    margin-left: -40px;
+    color: #fff;
+}
+.checkbox a{
+	color: #403838;
+	text-decoration: none;
+}
+.checkbox a:hover{
+	text-decoration: underline;
+}
