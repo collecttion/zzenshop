@@ -43,15 +43,26 @@ body{
     opacity: 0;
     color: #000;
     transition: 1s;
+    margin-top: -77px;
+    position: absolute;
+
+}
+.view a{
+    color: #000;
+}
+.view a:hover{
+    color: #aaa;
+}
+.cart{
+    margin-left: 64px;
 }
 .mt-9{
     margin-top: -29px;
 }
-.view button{
-    padding: 0 !important;
-    background: #fff !important;
+.page-link {
+    color: #000 !important;
 }
-.product:hover>a .cart{
+.product:hover>.cart{
     opacity: 1;
 
 }
@@ -76,8 +87,16 @@ body{
 .display-9{
         font-size: 11px;
 }
-
-
+.img-view{
+    height: 589px;
+}
+.img-view img{
+    width: 100%;
+    height: 100%;
+}
+.modal-footer {
+    border:none !important;
+}
 /*footer*/
 .footer-img1{
     background-image: url("https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/08/zeen-00006-585x585.jpg");

@@ -4,7 +4,7 @@ block conten
   .container
     // navbar
     nav.navbar.navbar-expand-lg.navbar-light.sticky-top
-      a.navbar-brand.display-4.font-weight-bold(href='#') ZenShop
+      a.navbar-brand.display-4.font-weight-bold(href='/') ZenShop
       button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
         ion-icon(name='menu')
       #navbarNav.collapse.navbar-collapse
@@ -15,7 +15,7 @@ block conten
           li.nav-item
             a.nav-link(href='#') VINTAGE
           li.nav-item
-            a.nav-link(href='#') BLOG
+            a.nav-link(href='/create') BLOG
           li.nav-item
             a.nav-link.disabled(href='#')
               i.fas.fa-cart-plus
@@ -23,7 +23,7 @@ block conten
             a.nav-link.disabled(href='#')
               ion-icon(name='list')
     div.title
-      h1.text-center.p-4 List Blog
+      h1.text-center.p-4 Product's
       hr
       main
         .container
@@ -33,40 +33,12 @@ block conten
                 .product
                     img.pb-3(src=posts.imgeFile)
                     .view
-                      button.btn.btn-light(type='', data-toggle='modal', data-target='#exampleModalCenter')
-                        p(style="font-weight: bold;" class="")=posts.name
-                          i.far.fa-eye.m-3
+                      a(style="font-weight: bold;" href="/post" + posts.id)
+                        i.far.fa-eye.m-3
+                    .cart
+                      a
+                        i.fas.fa-cart-plus.m-3
                     // Modal
-                    #exampleModalCenter.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalCenterTitle', aria-hidden='true')
-                      .modal-dialog.modal-dialog-centered(role='document')
-                        .modal-content
-                          .modal-body
-                            .container
-                              .row
-                                .col-xl-6.col-lg-6.col-md-6.img-view
-                                  img.img-fluid.product-post(src=posts.imgeFile)
-                                .col-xl-6.col-lg-6.col-md-6
-                                  .modal-footer
-                                    button.btn.btn-dark(type='button', data-dismiss='modal') X
-                                  .start-view
-                                    p Accessories
-                                    h1 Pine Clock
-                                    p
-                                      i.fas.fa-star
-                                      i.fas.fa-star
-                                      i.fas.fa-star
-                                      i.fas.fa-star-half
-                                      i.far.fa-star
-                                      span.display-9 (1 customer review)
-                                    p.repon
-                                      | Nunc aliquet eleifend felis, et ultrices nisl pretium a. Donec pellentesque turpis augue in lobortis sapien auctor ut. Duis elementum tortor metus, non vulputate orci semper id cras dapibus blandit enim.
-                                    .form-footer.float-none
-                                      p.footer-p-size
-                                        button.btn(type='button')
-                                          strong
-                                            a(href="/post" + posts.id) VIEW
-                                          i.fas.fa-arrow-right
-                                  hr
             .container
               .row
                 .col-xl-12

@@ -38,6 +38,13 @@ app.get('/create/table', async function(req, res){
         post:post
     })
 })
+//login
+app.get('/login/index', async function(req, res){
+    var post = await Post.find();
+    res.render('login/index',{
+        post:post
+    })
+})
 //home post
 app.get('/post', async function(req, res){
     var page = parseInt(req.query.page) || 1;
@@ -59,7 +66,7 @@ app.get('/create', function(req, res){
 
 app.post('/create', upload.single('imgeFile'), async function(req, res){
     
-    req.body.imgeFile = "uploads/" + req.file.path.split('puclic\\').slice(1).join('/');
+    req.body.imgeFile = "uploads/" + req.file.path.split('puclic\\uploads\\').slice(1).join('/');
 
     var posts = new Post(req.body);
 
@@ -134,7 +141,8 @@ app.get('/post:id', async function(req, res){
         }else{
         res.render('post/view', {
             title:idpost.name,
-            conten:idpost.conten
+            conten:idpost.conten,
+            img:idpost.imgeFile
         })
     }
     });

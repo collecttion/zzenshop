@@ -1,5 +1,132 @@
-h1 view conten
+extends ../layout/postComon
 
-h3=title
-
-a=conten
+block conten
+  .container
+    // navbar
+    nav.navbar.navbar-expand-lg.navbar-light.sticky-top
+      a.navbar-brand.display-4.font-weight-bold(href='/') ZenShop
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        ion-icon(name='menu')
+      #navbarNav.collapse.navbar-collapse
+        .mr-auto
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='#') TECH
+          li.nav-item
+            a.nav-link(href='#') VINTAGE
+          li.nav-item
+            a.nav-link(href='/create') BLOG
+          li.nav-item
+            a.nav-link.disabled(href='#')
+              i.fas.fa-cart-plus
+          li.nav-item
+            a.nav-link.disabled(href='#')
+              ion-icon(name='list')
+    div.title
+      h1.text-center.p-4
+  main
+    .container
+        .row
+          .col-xl-6.col-lg-6.col-md-6.img-view
+            img(src=img)
+          .col-xl-6.col-lg-6.col-md-6
+            .modal-footer
+            .start-view
+              p Product's name
+              h1=title
+              p
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star
+                i.fas.fa-star-half
+                i.far.fa-star
+                span.display-9 (1 customer review)
+              p.repon=conten
+              .form-footer.float-none
+                p.footer-p-size
+                  button.btn(type='button')
+                    strong
+                      span Add To Cart&#x9;
+                    i.fas.fa-arrow-right
+    .container
+      .row
+        .col-xl-12
+          h3.p-4 Related posts
+      .row
+        .col-xl-6.col-lg-6.col-md-6.col-sm-6
+          .footer-img1.p-5
+            p sirdow width in maria clock
+        .col-xl-6.col-lg-6.col-md-6.col-sm-6
+          .footer-img2.p-5
+            p sirdow width in maria clock
+    .container.pt-5
+      .row
+        .col-xl-6.col-lg-7.col-md-8
+          .row.font-footer
+            .col-xl-3.col-lg-3.col-md-3
+              p.pb-3 Quicklinks
+              p
+                a(href='') My account
+              p
+                a(href='') Checkout
+              p
+                a(href='') Cart
+              p
+                a(href='') Terms
+              p
+                a(href='') Home
+            .col-xl-3.col-lg-3.col-md-3
+              p.pb-3 Follow Us
+              p
+                a(href='') Facebook
+              p
+                a(href='') Twitter
+              p
+                a(href='') Pinterest
+              p
+                a(href='') Instagram
+              p
+                a(href='') Youtube
+            .col-xl-3.col-lg-3.col-md-3
+              p.pb-3 About Us
+              p
+                a(href='') Contact
+              p
+                a(href='') Contact
+              p
+                a(href='') Terms
+              p
+                a(href='') Privacy Policy
+              p
+                a(href='') Checkout
+        .col-xl-6.col-lg-5.col-md-4
+          .row
+            .col-xl-12
+              .form-footer
+                p.footer-p-size Sign up to get 10% off your first order
+                p
+                  input.form-control.float-right(type='email', placeholder='Enter email')
+                br
+                br
+                p.footer-p-size
+                  button.btn(type='button')
+                    strong
+                      span Subcribe
+                    i.fas.fa-arrow-right
+    .container.pt-5.pb-5
+      .row
+        .col-xl-12
+          .end
+            p Copyright 2019 ThanhTuan. All Rights Reserved.
+  footer
+      script(type='text/javascript').
+        var scroll1 = window.pageYOffset;
+        window.onscroll = function(){
+        var scroll2 = window.pageYOffset;
+        if (scroll1 > scroll2) {
+        document.querySelector('nav').style.top = "0";
+        }else{
+        document.querySelector('nav').style.top = "-100px";
+        }
+        scroll1 = scroll2;
+        }
