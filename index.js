@@ -66,7 +66,7 @@ app.get('/create', function(req, res){
 
 app.post('/create', upload.single('imgeFile'), async function(req, res){
     
-    req.body.imgeFile = "uploads/" + req.file.path.split('puclic\\uploads\\').slice(1).join('/');
+    req.body.imgeFile = "uploads/" + req.file.path;
 
     var posts = new Post(req.body);
 
