@@ -15,7 +15,7 @@ module.exports.upload = async function(req, res){
         
 
     req.body.imgeFile = req.file.path.split('puclic/').slice(1).join('/');
-
+    
     var posts = new Post(req.body);
 
 

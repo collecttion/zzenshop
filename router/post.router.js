@@ -21,23 +21,6 @@ router.get('/', async function(req, res){
 })
 
 
-//view id
-router.get('/:id', async function(req, res){
-    var id = req.params.id;
-    var post = await Post.findById(id, function(error, idpost){
-        if (error){
-        console.log('id wes')
-        }else{
-        res.render('post/view', {
-            title:idpost.name,
-            conten:idpost.conten,
-            img:idpost.imgeFile
-        })
-    }
-    });
-     
-})
-
 
 
 
