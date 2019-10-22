@@ -30,7 +30,8 @@ body{
     transition: 1s ;
 }
 .product img:hover{
-    opacity: 0.5;
+    opacity: 1;
+    transform:scale(1.2);
 }
 .repon{
         font-size: 19px !important;

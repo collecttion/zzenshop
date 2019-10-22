@@ -18,7 +18,7 @@ block conten
                 .card-header
                   h4.card-title Edit Text
                 .card-body
-                  form(action="/uploads" + post.id, method="POST", enctype="multipart/form-data")
+                  form(action="/create/uploads/" + post.id, method="POST", enctype="multipart/form-data")
                     .row
                       .col-md-12
                         .form-group

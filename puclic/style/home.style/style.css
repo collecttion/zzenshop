@@ -22,7 +22,6 @@ body{
 }
 .navbar{
     background: #fff;
-    opacity: 0.9;
     transition: 1s;
 }
 .navbar-light .navbar-toggler {
@@ -158,6 +157,7 @@ body{
 .display-9{
         font-size: 11px;
 }
+/*navbar*/
 
 
 
