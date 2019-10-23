@@ -118,6 +118,11 @@ block conten
                     .row
                       .col-md-12
                         .form-group
+                          label(for="price") Peice
+                          input#name.form-control(type="text" name="price" value = values ? values.price:"")
+                    .row
+                      .col-md-12
+                        .form-group
                           label(for="conten") Conten
                           textarea.form-control(rows='4', cols='80', placeholder='Here can be your description',type="text" name="conten" value = values ? values.text:"") 
                     button.btn.btn-info.btn-fill.pulsl-right(type='submit') Update Profile

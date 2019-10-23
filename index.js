@@ -38,9 +38,15 @@ app.use('/auth', routerAuth);
 
 
 app.get('/', async function(req, res){
+    var page = parseInt(req.query.page) || 1;
+    var perPage = 9;
+
+    var start = (page - 1) * perPage;
+    var end = page * perPage;
+    
     var post = await Post.find();
     res.render('index',{
-        post:post
+        post:post.slice(start, end),
     })
 })
 
@@ -63,9 +69,6 @@ app.get('/post:id', async function(req, res){
     });
      
 })
-
-
-
 
 
 app.listen(port, function(){

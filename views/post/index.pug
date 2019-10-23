@@ -38,6 +38,10 @@ block conten
                     .cart
                       a
                         i.fas.fa-cart-plus.m-3
+                    div.title
+                        p=posts.name
+                    div.price
+                        p="$" + posts.price
                     // Modal
             .container
               .row
@@ -64,6 +68,8 @@ block conten
               .row
                 .col-xl-12
                   h3.p-4 Blog
+                  each rands in rand
+                    a=rands
               .row
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6
                   .footer-img1.p-5

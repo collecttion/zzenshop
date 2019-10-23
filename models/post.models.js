@@ -6,7 +6,8 @@ var postSchema = new mongoose.Schema({
 	conten: String,
 	imgeFile: String,
 	email:String,
-	password:String
+	password:String,
+	price:String
 });
 
 var Post = mongoose.model('Post', postSchema, 'post');

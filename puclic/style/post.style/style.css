@@ -22,6 +22,9 @@ body{
 .product-post{
     height: 100% !important;
 }
+.product{
+    overflow: hidden;
+}
 .product img{
     background-size: 100%;
     width: 100%;
