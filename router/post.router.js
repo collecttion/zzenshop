@@ -17,10 +17,19 @@ router.get('/', async function(req, res){
     var post = await Post.find();
 
     var rand = post[Math.floor(Math.random() * post.length)];
-    console.log(rand)
+    var randa = post[Math.floor(Math.random() * post.length)];
+    var randb = post[Math.floor(Math.random() * post.length)];
+  
+   	var randc = [];
+
+   	randc.push(rand);
+   	randc.push(randa);
+   	randc.push(randb);
+
+
     res.render('post/index',{
         post:post.slice(start, end),
-        rand:rand
+        randc:randc
     })
 })
 

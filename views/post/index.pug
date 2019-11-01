@@ -65,11 +65,18 @@ block conten
 
             // footer
             .container
+              h1 product lien quan
               .row
-                .col-xl-12
-                  h3.p-4 Blog
-                  each rands in rand
-                    a=rands
+                  each rands in randc
+                    .col-xl-4.col-lg-4.col-md-4.col-sm-4
+                      .product
+                        a(href="/post" + rands.id)
+                          img.pb-3(src=rands.imgeFile )
+                      div.title
+                          p=rands.name
+                      div.price
+                          p="$" + rands.price
+              h1 blog
               .row
                 .col-xl-6.col-lg-6.col-md-6.col-sm-6
                   .footer-img1.p-5
