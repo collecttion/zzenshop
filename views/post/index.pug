@@ -17,7 +17,7 @@ block conten
           li.nav-item
             a.nav-link(href='/create') BLOG
           li.nav-item
-            a.nav-link.disabled(href='#')
+            a.nav-link.disabled(href='/cart')
               i.fas.fa-cart-plus
           li.nav-item
             a.nav-link.disabled(href='#')
@@ -37,7 +37,8 @@ block conten
                         i.far.fa-eye.m-3
                     .cart
                       a
-                        i.fas.fa-cart-plus.m-3
+                        a(style="font-weight: bold;" href="cart/buy/" + posts.id)
+                          i.fas.fa-cart-plus.m-3
                     div.title
                         p=posts.name
                     div.price

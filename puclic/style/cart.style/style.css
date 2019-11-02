@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Playfair+Display&display=swap');
+
+
+
+body{
+    font-family: 'Playfair Display', serif !important;
+    letter-spacing: 2px !important;
+    line-height: 1.6666666666667 !important;
+}
+.navbar{
+    background: #fff;
+    opacity: 0.9;
+    transition: 1s;
+}
+.navbar-light .navbar-toggler {
+    border:none;
+    }
+.sticky-top .display-4{
+    font-size: 45px;
+}
+/*main*/
+.product-post{
+    height: 100% !important;
+}
+.product{
+    overflow: hidden;
+}
+.product img{
+    background-size: 100%;
+    width: 100%;
+    height: 300px;
+    background-position: center;
+    transition: 1s ;
+}
+.product img:hover{
+    opacity: 1;
+    transform:scale(1.2);
+}
+.repon{
+        font-size: 19px !important;
+    }
+.view, .cart{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    float: left;
+    opacity: 0;
+    color: #000;
+    transition: 1s;
+    margin-top: -77px;
+    position: absolute;
+
+}
+.view a{
+    color: #000;
+}
+.view a:hover{
+    color: #aaa;
+}
+.cart{
+    margin-left: 64px;
+}
+.mt-9{
+    margin-top: -29px;
+}
+.page-link {
+    color: #000 !important;
+}
+.product:hover>.cart{
+    opacity: 1;
+
+}
+.product:hover>.view{
+    opacity: 1;
+}
+
+.modal-dialog {
+    max-width: 85% !important;
+ }
+ .modal-content {
+    border-radius: 0rem !important;
+}
+.modal-body {
+    padding: 0rem !important;
+}
+
+
+.start-view p i{
+    color: #FFBF00;
+}
+.display-9{
+        font-size: 11px;
+}
+.img-view{
+    height: 589px;
+}
+.img-view img{
+    width: 100%;
+    height: 100%;
+}
+.modal-footer {
+    border:none !important;
+}
+/*footer*/
+.footer-img1{
+    background-image: url("https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/08/zeen-00006-585x585.jpg");
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.5;
+    transition: 2.5s;
+    width: 100%;
+    height: 400px;  
+}
+.footer-img2{
+    background-image: url("https://demos.codetipi.com/zeen-shop/wp-content/uploads/sites/15/2018/08/zeen-00023-585x585.jpg");
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.5;
+    transition: 2.5s;
+    width: 100%;
+    height: 400px;  
+}
+.footer-img1, .footer-img2 p{
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.footer-img1 p{
+    transition: 1s;
+}
+.footer-img2 p{
+    transition: 1s;
+}
+.footer-img1:hover>p{
+    opacity: 0;
+    letter-spacing: 10px;
+}
+.footer-img2:hover>p{
+    opacity: 0;
+    letter-spacing: 10px;
+}
+.footer-img2:hover>p{
+    opacity: 0;
+}
+.footer-img1:hover{
+    background-size: 120%;
+    opacity: 0.8;
+}
+.footer-img2:hover{
+    background-size: 120%;
+    opacity: 0.8;
+}
+
+.font-footer{
+    font-size: 13.5px;
+    font-size: 14px;
+    transition: 1s;
+}
+.footer-p-size{
+    text-align: right;
+}
+.font-footer p{
+    line-height: 1 !important;
+    font-size: 14px;
+
+}
+
+.font-footer p a{
+    color: #585858;
+    font-size: 12px;
+
+}
+.form-footer input{
+    border-bottom: 2px solid #222 !important;
+    border: 1px solid #fff ;
+    width: 50%;
+}
+.form-footer button{
+    width: 50%;
+    background: #000;
+    color: #fff;
+    height: 50px;
+    border-radius:0rem !important;
+}
+.form-footer i{
+    opacity: 0; 
+    transition: 0.5s;
+    position: relative;
+}
+.form-footer button:hover>i{
+    opacity: 1;
+    display: inline-block;
+    margin-left: 7%;
+}
+.end{
+    font-size: 11px;
+    font-weight: 600;
+    
+}
+.end p{
+    color: #585858;
+}
+.view button{
+    border:none !important;
+}
+.footer-p-size a{
+    color: #fff;
+}
+.footer-p-size a:hover{
+    opacity: 0.5;
+    color: #fff;
+    
+}
+.product img{
+    width: 90px;
+    height: 120px;
+}
+@media (max-width: 1200px) { 
+        /*main*/
+        .product img{
+            width: 100%;
+            height: 250px;
+        }
+        
+}
+@media (max-width: 992px){
+        /*main*/
+        .product img{
+            width: 100%;
+            height: 190px;
+        }
+        .display-4 {
+            font-size: 2rem !important;
+        }
+        /*footer*/
+        .footer-img1, .footer-img2{
+            height: 300px;
+        }
+        .form-footer button{
+            font-size: 13px !important;
+        }
+        .repon{
+            font-size: 11px !important;
+        }
+    }
+        
+@media (max-width: 768px) {
+        /*main*/
+        .product img{
+            width: 100%;
+            height: 140px;
+        }
+        .sticky-top .display-4{
+            font-size: 35px !important;
+            opacity: 1;
+        }
+        /*footer*/
+        .footer-img1, .footer-img2{
+            height: 220px;
+        }
+        .footer-p-size{
+            text-align: left;
+        }
+        .form-footer input{
+            width: 100%;
+            margin-left: 0px;
+        }
+        .form-footer button{
+            width: 100%;
+            font-size: 13px !important;
+        }
+
+}
+@media (max-width: 576px) { 
+        .product img{
+            height: 360px;
+        }
+    /*footer*/
+        .footer-img1, .footer-img2{
+            height: 360px;
+            margin-top: 5px;
+        }
+        .modal-dialog {
+            margin: 2rem !important;
+        }
+
+ }

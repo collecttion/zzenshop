@@ -1,0 +1,62 @@
+extends ../layout/cartComon
+
+block conten
+  .container
+    // navbar
+    nav.navbar.navbar-expand-lg.navbar-light.sticky-top
+      a.navbar-brand.display-4.font-weight-bold(href='/') ZenShop
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNav', aria-controls='navbarNav', aria-expanded='false', aria-label='Toggle navigation')
+        ion-icon(name='menu')
+      #navbarNav.collapse.navbar-collapse
+        .mr-auto
+        ul.navbar-nav
+          li.nav-item
+            a.nav-link(href='#') TECH
+          li.nav-item
+            a.nav-link(href='#') VINTAGE
+          li.nav-item
+            a.nav-link(href='/create') BLOG
+          li.nav-item
+            a.nav-link.disabled(href='/cart')
+              i.fas.fa-cart-plus
+          li.nav-item
+            a.nav-link.disabled(href='#')
+              ion-icon(name='list')
+    div.title
+      h1.text-center.p-4
+  main
+    .container
+        .row
+          each item in session.cart
+            .col-xl-8.col-lg-8.col-md-8
+              div.table
+                .row
+                  div.product.col-xl-2.col-lg-2.col-md-2
+                    img(src=item.product.imgeFile)
+                  div.col-xl-3.col-lg-3.col-md-3
+                    a=item.product.name
+                  div.col-xl-1.col-lg-1.col-md-1
+                    p=item.quantity
+                  div.col-xl-6.col-lg-6.col-md-6
+                    a(href="/delete/" + index) X
+                    p=item.product.price*item.quantity
+            .col-xl-4.col-lg-4.col-md-4
+              
+      
+    .container.pt-5.pb-5
+      .row
+        .col-xl-12
+          .end
+            p Copyright 2019 ThanhTuan. All Rights Reserved.
+  footer
+      script(type='text/javascript').
+        var scroll1 = window.pageYOffset;
+        window.onscroll = function(){
+        var scroll2 = window.pageYOffset;
+        if (scroll1 > scroll2) {
+        document.querySelector('nav').style.top = "0";
+        }else{
+        document.querySelector('nav').style.top = "-100px";
+        }
+        scroll1 = scroll2;
+        }
