@@ -44,6 +44,7 @@ app.use(function(req, res, next){
     next();
 })
 
+
 app.get('/', async function(req, res){
     var page = parseInt(req.query.page) || 1;
     var perPage = 9;
@@ -52,6 +53,9 @@ app.get('/', async function(req, res){
     var end = page * perPage;
     
     var post = await Post.find();
+   
+
+
     res.render('index',{
         post:post.slice(start, end),
     })
@@ -84,7 +88,7 @@ app.get('/cart', function(req, res, next){
 });
 
 
-app.get('/cart/buy/:id', async function(req, res){
+app.get('/buy:id', async function(req, res){
     var id = req.params.id;
     
     var post = await Post.findById(id, function(error, product){
@@ -109,6 +113,8 @@ app.get('/cart/buy/:id', async function(req, res){
                 req.session.cart[index].quantity++;
             }
         }
+
+
         res.render('cart/index');
         console.log(product)
 

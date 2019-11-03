@@ -27,20 +27,37 @@ block conten
   main
     .container
         .row
+          .col-xl-8.col-lg-8.col-md-8
+            h4 Shopping cart
+            br
+          .col-xl-4.col-lg-4.col-md-4
+            h4 Cart totals
+        .row
+
           each item in session.cart
             .col-xl-8.col-lg-8.col-md-8
+              br
               div.table
                 .row
                   div.product.col-xl-2.col-lg-2.col-md-2
                     img(src=item.product.imgeFile)
-                  div.col-xl-3.col-lg-3.col-md-3
+                  div.col-xl-4.col-lg-4.col-md-4
                     a=item.product.name
-                  div.col-xl-1.col-lg-1.col-md-1
-                    p=item.quantity
-                  div.col-xl-6.col-lg-6.col-md-6
+                    p="" + item.quantity
+                  div.col-xl-6.col-lg-6.col-md-6.closes
                     a(href="/delete/" + index) X
-                    p=item.product.price*item.quantity
-            .col-xl-4.col-lg-4.col-md-4
+                    br
+                    br
+                    p="$" + item.product.price*item.quantity
+                hr
+            .col-xl-4.col-lg-4.col-md-4.totals
+
+        .row
+          .col-xl-8
+            div.continue 
+              a(href="/") Continue shopping
+            div.upload uplod
+          .col-xl-4
               
       
     .container.pt-5.pb-5
