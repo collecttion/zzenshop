@@ -121,10 +121,14 @@ body{
     position: absolute;
 
 }
-.view a{
+.view a,.cart a{
     color: #000;
 }
+
 .view a:hover{
+    color: #aaa;
+}
+.cart a:hover{
     color: #aaa;
 }
 .cart{

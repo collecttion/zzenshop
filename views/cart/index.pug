@@ -27,38 +27,79 @@ block conten
   main
     .container
         .row
-          .col-xl-8.col-lg-8.col-md-8
-            h4 Shopping cart
-            br
-          .col-xl-4.col-lg-4.col-md-4
-            h4 Cart totals
-        .row
-
-          each item in session.cart
-            .col-xl-8.col-lg-8.col-md-8
+            .col-xl-8.col-lg-6
+              h4 Shopping cart
               br
               div.table
                 .row
-                  div.product.col-xl-2.col-lg-2.col-md-2
-                    img(src=item.product.imgeFile)
-                  div.col-xl-4.col-lg-4.col-md-4
-                    a=item.product.name
-                    p="" + item.quantity
-                  div.col-xl-6.col-lg-6.col-md-6.closes
-                    a(href="/delete/" + index) X
-                    br
-                    br
-                    p="$" + item.product.price*item.quantity
-                hr
-            .col-xl-4.col-lg-4.col-md-4.totals
+                  if session.cart
+                    -index = 0
+                    -sum = 0
+                  each item in session.cart
+                    -sum += item.product.price*item.quantity
+                    div.product.col-xl-2.col-lg-4.col-md-3.col-sm-3.col-4
+                      img(src=item.product.imgeFile)
+                      hr
+                    div.col-xl-4.col-lg-4.col-md-4.col-sm-4.col-4
+                      a=item.product.name
+                      p="" + item.quantity
 
-        .row
-          .col-xl-8
-            div.continue 
-              a(href="/") Continue shopping
-            div.upload uplod
-          .col-xl-4
-              
+                    div.col-xl-6.col-lg-4.col-md-5.col-sm-5.col-4.closes
+                      a.text-danger(href="/delete/" + index) X
+                      -index++
+                      br
+                      br
+                      p="$" + item.product.price*item.quantity
+              div.continue 
+                a.repon(href="/") Continue shopping
+              div.upload 
+                a.repon uplod
+                      
+            .col-xl-4.col-lg-6.totals
+              h4 cart cradit
+              br
+              form.formcoi
+                .form-group.mb-0.row
+                  label.p-3.col-form-label(for='') Enter coupon
+              form.formcoi
+                .form-group.mb-0.row
+                  label.p-3.col-form-label(for='') Calculate shipping
+              form.formcoi
+                .form-group.mb-0.row
+                  .col-xl-8
+                    label.p-9.col-form-label(for='') Subtotal
+                  .col-xl-4
+                    p.mt-3="$" + sum
+                hr
+                fieldset.form-group
+                  .row
+                    legend.col-form-label.col-sm-2.pt-0 Shipping
+                    .col-sm-10
+                      br
+                      .form-check
+                        input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+                        label.form-check-label(for='gridRadios2')
+                          | Standard:
+                      .form-check.disabled
+                        input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
+                        label.form-check-label(for='gridRadios3')
+                          | Express:
+                .form-group.row
+                  .col-sm-12 Shipping to Vietnam.
+
+                hr
+                .form-group.row
+                  .col-xl-8.col-lg-8.col-md-8.col-sm-8.col-8
+                    label.col-form-label(for='') Total
+                  .col-xl-4.col-lg-4.col-md-4.col-sm-4.col-4
+                    p="$" + sum
+              .form-group.row
+                .col-xl-12
+                  p.button-cart
+                    button.btn(type='button')
+                        strong
+                          a(href="") pay
+                
       
     .container.pt-5.pb-5
       .row
