@@ -131,6 +131,15 @@ app.get('/delete/:index', function(req, res, next){
 
 });
 
+//pay
+app.get('/cart/checkout', function(req, res, next){
+    res.render('cart/checkout');
+});
+app.get('/send', function(req, res, next){
+    res.send('oder thanh cong');
+});
+
+
 app.listen(port, function(){
     console.log("hey,babe tuan" + port)
 });

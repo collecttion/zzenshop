@@ -28,35 +28,55 @@ block conten
     .container
         .row
             .col-xl-8.col-lg-6
-              h4 Shopping cart
+              h4 Billing details
               br
               div.table
-                .row
-                  if session.cart
-                    -index = 0
-                    -sum = 0
-                  each item in session.cart
-                    -sum += item.product.price*item.quantity
-                    div.product.col-xl-2.col-lg-4.col-md-3.col-sm-3.col-4
-                      img(src=item.product.imgeFile)
-                      hr
-                    div.col-xl-4.col-lg-4.col-md-4.col-sm-4.col-4
-                      a=item.product.name
-                      p="" + item.quantity
+                  form.was-validated
+                    .mb-3
+                      from
+                        .row
+                          .col
+                            label(for='') First name *
+                            input.form-control.is-invalid(placeholder='', required='')
+                          .col
+                            label(for='') Last name *
+                            input.form-control.is-invalid(placeholder='', required='')
+                      label(for='') Company name (optional)
+                      input.form-control.is-invalid(placeholder='', required='')
+                      label(for='') Country *
+                      .form-group
+                        select.custom-select(required='')
+                          option(value='') select
+                          option(value='1') Keore
+                          option(value='2') Asia
+                          option(value='3') Viet Nam
+                      label(for='') Street address *
+                      input.form-control.is-invalid(placeholder='', required='')
+                      label(for='') Postcode / ZIP (optional)
+                      input.form-control.is-invalid(placeholder='', required='')
+                      label(for='') Town / City *
+                      input.form-control.is-invalid(placeholder='', required='')
+                      label(for='') Phone *
+                      input.form-control.is-invalid(placeholder='', required='')
+                      label(for='') Email address *
+                      input.form-control.is-invalid(placeholder='', required='')
+                      .custom-control.custom-radio
+                        input#customControlValidation2.custom-control-input(type='radio', name='radio-stacked', required='')
+                        label.custom-control-label(for='customControlValidation2') Create an account?
+                      .custom-control.custom-radio.mb-3
+                        input#customControlValidation3.custom-control-input(type='radio', name='radio-stacked', required='')
+                        label.custom-control-label(for='customControlValidation3') Ship to a different address?
+                        .invalid-feedback More example invalid feedback text
+                        .invalid-feedback Example invalid custom select feedback
+                      label(for='') Order notes (optional)
+                      textarea#validationTextarea.form-control.is-invalid(placeholder='', required='')
+                      .invalid-feedback
+                        | Please enter a message in the textarea.
 
-                    div.col-xl-6.col-lg-4.col-md-5.col-sm-5.col-4.closes
-                      a.text-danger(href="/delete/" + index) X
-                      -index++
-                      br
-                      br
-                      p="$" + item.product.price*item.quantity
-              div.continue 
-                a.repon(href="/") Continue shopping
-              div.upload 
-                a.repon uplod
+
                       
             .col-xl-4.col-lg-6.totals
-              h4 cart cradit
+              h4 Your order
               br
               form.formcoi
                 .form-group.mb-0.row
@@ -98,7 +118,7 @@ block conten
                   p.button-cart
                     button.btn(type='button')
                         strong
-                          a(href="cart/checkout") pay
+                          a(href="/send") Place Oder
                 
       
     .container.pt-5.pb-5
