@@ -5,7 +5,6 @@
 	background: linear-gradient(to bottom, #343a40 0%, #004185 100%);
 	background-size: cover;
 	background-position: right;
-	margin: 10%;
 	border-radius: 5%;
 	position: relative;
 	color: #aaa;
@@ -14,10 +13,8 @@
 	width:39%;
 	height: 82%;
 	margin: 2%;
-	margin-top: 7%;
 	background:#ff574d;
 	border-radius: 10px;
-	float: right;
 	margin-right: -7%;
 	text-align: center;
 	padding-top: 5%;

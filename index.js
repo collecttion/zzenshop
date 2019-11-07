@@ -5,6 +5,7 @@ const pug = require("pug");
 var port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Post = require('./models/post.models');
+var auth = require('./middleware/auth.middleware');
 const bodyParser = require('body-parser');
 var session = require('express-session');
 const cookieParser = require('cookie-parser');
@@ -34,7 +35,7 @@ app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 
 
-app.use('/create', routerCreate);
+app.use('/create', auth.requireAuth, routerCreate);
 app.use('/post', routerPost);
 app.use('/auth', routerAuth);
 
