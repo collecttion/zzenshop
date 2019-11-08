@@ -8,13 +8,24 @@ var controller = require('../controller/create.controller')
 
 //create
 module.exports.index = function(req, res){
-    res.render('create/index')
+    var today = new Date();
+ 
+    // Giờ, phút, giây hiện tại
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+    var n = today.getDate();
+    var t = today.getMonth();
+    res.render('create/index',{
+        time:h +" Giờ : "+ m + " : "+ s,
+        date:" Ngày:" + n +"/"+t, 
+    })
 };
 
 module.exports.upload = async function(req, res){
         
 
-    req.body.imgeFile = req.file.path.split('puclic/').slice(1).join('/');
+    req.body.imgeFile = req.file.path.split('puclic\\').slice(1).join('');
     
     var posts = new Post(req.body);
 

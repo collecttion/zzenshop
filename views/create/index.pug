@@ -9,7 +9,7 @@ block conten
       .sidebar-wrapper
         .logo
           a.simple-text(href='')
-            | Creative Tim
+            | Zenshop
         ul.nav
           li
             a.nav-link(href='')
@@ -47,7 +47,7 @@ block conten
       // Navbar
       nav.navbar.navbar-expand-lg(color-on-scroll='500')
         .container-fluid
-          a.navbar-brand(href='#pablo')  Table List 
+          h3 Table Conten
           button.navbar-toggler.navbar-toggler-right(href='', type='button', data-toggle='collapse', aria-controls='navigation-index', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-bar.burger-lines
             span.navbar-toggler-bar.burger-lines
@@ -55,12 +55,10 @@ block conten
           #navigation.collapse.navbar-collapse.justify-content-end
             ul.nav.navbar-nav.mr-auto
               li.nav-item
-                a.nav-link(href='#', data-toggle='dropdown')
-                  i.nc-icon.nc-palette
                   span.d-lg-none Dashboard
               li.dropdown.nav-item
                 a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
-                  i.nc-icon.nc-planet
+                  i.fas.fa-receipt
                   span.notification 5
                   span.d-lg-none Notification
                 ul.dropdown-menu
@@ -69,27 +67,11 @@ block conten
                   a.dropdown-item(href='#') Notification 3
                   a.dropdown-item(href='#') Notification 4
                   a.dropdown-item(href='#') Another notification
-              li.nav-item
-                a.nav-link(href='#')
-                  i.nc-icon.nc-zoom-split
-                  span.d-lg-block &nbsp;Search
             ul.navbar-nav.ml-auto
               li.nav-item
-                a.nav-link(href='#pablo')
-                  span.no-icon Account
-              li.nav-item.dropdown
-                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                  span.no-icon Dropdown
-                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                  a.dropdown-item(href='#') Action
-                  a.dropdown-item(href='#') Another action
-                  a.dropdown-item(href='#') Something
-                  a.dropdown-item(href='#') Something else here
-                  .divider
-                  a.dropdown-item(href='#') Separated link
-              li.nav-item
-                a.nav-link(href='#pablo')
-                  span.no-icon Log out
+                a.nav-link(href='/auth/login')
+                  span.no-icon Log out &nbsp;
+                  i.fas.fa-sign-out-alt
 
       // End Navbar
       .content
@@ -105,7 +87,7 @@ block conten
                       .col-md-12
                         .form-group
                           label(for="date") Datetime
-                          input#date.form-control(type='text' name="date" value = values ? values.date:Date())
+                          input#date.form-control(type='text' name="date" value = values ? values.date:time+"           "+date readonly)
                     .row
                       .col-md-4.pr-1
                         .form-group
@@ -119,7 +101,7 @@ block conten
                       .col-md-12
                         .form-group
                           label(for="price") Peice
-                          input#name.form-control(type="text" name="price" value = values ? values.price:"")
+                          input#name.form-control(type="number" name="price" value = values ? values.price:"")
                     .row
                       .col-md-12
                         .form-group
@@ -136,8 +118,6 @@ block conten
                     a(href='#')
                       img.avatar.border-gray(src='/img/love.jpg')
                       h5.title Thanh Tuan
-                    p.description
-                      | Thanh Tuan
                   p.description.text-center
                     | &quot;hát hay
                     br
@@ -147,11 +127,11 @@ block conten
                 hr
                 .button-container.mr-auto.ml-auto
                   button.btn.btn-simple.btn-link.btn-icon(href='#')
-                    i.fa.fa-facebook-square
+                    i.fab.fa-facebook-f.fa-lg
                   button.btn.btn-simple.btn-link.btn-icon(href='#')
-                    i.fa.fa-twitter
+                    i.fab.fa-twitter.fa-lg
                   button.btn.btn-simple.btn-link.btn-icon(href='#')
-                    i.fa.fa-google-plus-square
+                    i.fab.fa-google-plus-g.fa-lg
       footer.footer
         .container-fluid
           nav

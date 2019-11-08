@@ -1,24 +1,37 @@
 
+body{
+	background: #000;
+}
+
+.mt-6{
+	margin-top: 80px;
+	padding: 8%;
+}
+
+
 .login-page{
 	width:45%;
-	height: 70%; 
-	background: linear-gradient(to bottom, #343a40 0%, #004185 100%);
+	height: 486px; 
+	background: linear-gradient(to bottom, #343a40 0%, #fa9f9f45 100%);
 	background-size: cover;
 	background-position: right;
 	border-radius: 5%;
-	position: relative;
+	position: fixed;
 	color: #aaa;
+	transition: 0.5s;
 }
 .table2-login{
-	width:39%;
-	height: 82%;
+	transition: 0.5s;
+	width:20%;
+	height: 72%;
 	margin: 2%;
-	background:#ff574d;
-	border-radius: 10px;
-	margin-right: -7%;
+	background: linear-gradient(to bottom, #ffffff 0%, #fa9f9f 100%);
+	border-radius: 8px;
 	text-align: center;
 	padding-top: 5%;
 	padding-bottom: 12%;
+	position: fixed;
+    margin-left: 531px;
 }
 .login{
 	position: absolute;
@@ -36,6 +49,9 @@
 	font-size: 15px;
 	border:1px solid #aaa;
 	padding-left: 14px;
+	margin-left: 9%;
+	color: #fff;
+	background: center;
 }
 .form-ground label{
 	width:100%;
@@ -45,7 +61,6 @@
   background:  #faab9f;
   border:1px solid #aaa;
   border-radius: 3px;
-  font-size: 18px;
   transition: 0.5s;
 }
 .form-ground button a{
@@ -70,15 +85,16 @@ padding: 30px 0 30px 60px;
     font-size: 22px;
     font-weight: 600;
     font-family: 'Open Sans', sans-serif;
-    color: #272323;
+    color: #aaa;
 }
 .checkbox{
-	margin-left: 3%;
+	margin-left: 8%;
     margin-top: 3%;
 }
 .checkbox a{
 	margin-left: 24%;
 }
+
 
 .table2-login a{
 	font-size: 45px;
@@ -118,9 +134,39 @@ padding: 30px 0 30px 60px;
     color: #fff;
 }
 .checkbox a{
-	color: #403838;
+	color: #aaa;
 	text-decoration: none;
 }
 .checkbox a:hover{
 	text-decoration: underline;
 }
+
+
+@media (max-width: 1185px){
+	.table2-login{
+        	margin-left: 440px;
+        }
+}
+
+@media (max-width: 992px){
+	 .table2-login{
+        	display: none;
+        }
+    .login-page {
+    width: 70%;
+	}
+}
+       
+@media (max-width: 768px) {
+    .form-ground input, button {
+    	height: 7%;
+    }
+
+}
+@media (max-width: 576px) { 
+     .login-page {
+    	width: 80%;
+    	height: 367px;
+	}
+
+ }

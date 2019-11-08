@@ -22,14 +22,14 @@ module.exports.upload = function(req, res, next){
 module.exports.login = function(req, res, next){
 	var errors = [];
 
-	if (!req.body.name){
-		errors.push('Name is requiresd');
+	if (!req.body.email){
+		errors.push('email is requiresd');
 	}
 
 	if (!req.body.password){
-		errors.push('Please upload a password');
+		errors.push('Please a password');
 	}
-
+	
 	if(errors.length){
 		res.render('auth/login', {
 			errors:errors,

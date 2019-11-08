@@ -6,8 +6,8 @@ var validate = require('../validate/create.validate');
 var router = express.Router()
 
 //login
-router.get('/login', validate.login, controller.login );
+router.get('/login',  controller.login );
 
-router.post('/login', controller.postLogin);
+router.post('/login', validate.login, controller.postLogin);
 
 module.exports = router;

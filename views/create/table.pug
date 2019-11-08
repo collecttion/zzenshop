@@ -6,7 +6,7 @@ block conten
       .sidebar-wrapper
         .logo
           a.simple-text(href='http://www.creative-tim.com')
-            | Creative Tim
+            | Zenshop
         ul.nav
           li
             a.nav-link(href='dashboard.html')
@@ -44,7 +44,7 @@ block conten
       // Navbar
       nav.navbar.navbar-expand-lg(color-on-scroll='500')
         .container-fluid
-          a.navbar-brand(href='#pablo')  Table List 
+          h3 Table Conten
           button.navbar-toggler.navbar-toggler-right(href='', type='button', data-toggle='collapse', aria-controls='navigation-index', aria-expanded='false', aria-label='Toggle navigation')
             span.navbar-toggler-bar.burger-lines
             span.navbar-toggler-bar.burger-lines
@@ -52,12 +52,10 @@ block conten
           #navigation.collapse.navbar-collapse.justify-content-end
             ul.nav.navbar-nav.mr-auto
               li.nav-item
-                a.nav-link(href='#', data-toggle='dropdown')
-                  i.nc-icon.nc-palette
                   span.d-lg-none Dashboard
               li.dropdown.nav-item
                 a.dropdown-toggle.nav-link(href='#', data-toggle='dropdown')
-                  i.nc-icon.nc-planet
+                  i.fas.fa-receipt
                   span.notification 5
                   span.d-lg-none Notification
                 ul.dropdown-menu
@@ -66,27 +64,11 @@ block conten
                   a.dropdown-item(href='#') Notification 3
                   a.dropdown-item(href='#') Notification 4
                   a.dropdown-item(href='#') Another notification
-              li.nav-item
-                a.nav-link(href='#')
-                  i.nc-icon.nc-zoom-split
-                  span.d-lg-block &nbsp;Search
             ul.navbar-nav.ml-auto
               li.nav-item
-                a.nav-link(href='#pablo')
-                  span.no-icon Account
-              li.nav-item.dropdown
-                a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='http://example.com', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                  span.no-icon Dropdown
-                .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
-                  a.dropdown-item(href='#') Action
-                  a.dropdown-item(href='#') Another action
-                  a.dropdown-item(href='#') Something
-                  a.dropdown-item(href='#') Something else here
-                  .divider
-                  a.dropdown-item(href='#') Separated link
-              li.nav-item
-                a.nav-link(href='#pablo')
-                  span.no-icon Log out
+                a.nav-link(href='/auth/login')
+                  span.no-icon Log out &nbsp;
+                  i.fas.fa-sign-out-alt
 
       // End Navbar
       .content
@@ -100,23 +82,27 @@ block conten
                 .card-body.table-full-width.table-responsive
                   table.table.table-hover
                     thead
-                      th ID
                       th Name
+                      th ID
                       th Ngày
+                      th prince
                       th Edit
                       th Xóa bài
+                      
                     tbody
                     each posts in post
                       tr
-                        td=posts._id
                         td=posts.name
+                        td=posts._id
                         td
+                        td="$" + posts.price
                         td
                           button.btn.btn-danger
                               a(href="/create/table/edit" + posts.id ) Edit
                         td
                           button.btn.btn-danger
                               a(href="/create/table" + posts.id ) x
+                        
       footer.footer
         .container-fluid
           nav
